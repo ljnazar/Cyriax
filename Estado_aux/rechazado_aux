@@ -1,0 +1,3 @@
+       0        0 REJECT     icmp --  eth0   *       0.0.0.0/0            10.0.0.1             icmptype 8 limit: avg 1/min burst 1 reject-with icmp-host-unreachable
+       0        0 REJECT     icmp --  eth0   *       0.0.0.0/0            10.0.0.1             icmptype 13 limit: avg 1/min burst 1 reject-with icmp-host-unreachable
+       0        0 REJECT     tcp  --  eth0   *       0.0.0.0/0            10.0.0.1             tcpflags: 0x17/0x02 state NEW reject-with tcp-reset

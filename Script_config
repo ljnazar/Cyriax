@@ -1,0 +1,39 @@
+#!/bin/bash
+# -- UTF 8 --
+
+var1="#!/bin/bash"
+
+var2="# -- UTF 8 --"
+
+var3="iptables=\"/sbin/iptables\""
+
+var4="# Cadena (Usar INPUT si el firewall se ejecuta en el mismo servidor a proteger y usar FORWARD si el firewall se ejecuta en un host aparte y está conectado al Servidor a proteger)"
+
+var5="CADENA=\"FORWARD\""
+
+var6="# Limpiar tablas"
+
+var7="\$iptables -F"
+var8="\$iptables -X"
+var9="\$iptables -Z"
+
+var10="# Definir política por defecto"
+
+var11="\$iptables -P INPUT ACCEPT"
+var12="\$iptables -P FORWARD ACCEPT"
+var13="\$iptables -P OUTPUT ACCEPT"
+
+var14="# Conteo de paquetes por protocolo"
+
+var15="\$iptables -N Conteo"
+
+var16="\$iptables -A \$CADENA -p icmp -j Conteo"
+var17="\$iptables -A \$CADENA -p tcp -j Conteo"
+var18="\$iptables -A \$CADENA -p udp -j Conteo"
+
+var19="# Parámetros del firewall"
+
+
+# Guardar en archivo
+
+echo -e $var1\\n\\n$var2\\n\\n$var3\\n\\n$var4\\n\\n$var5\\n\\n$var6\\n\\n$var7\\n\\n$var8\\n\\n$var9\\n\\n$var10\\n\\n$var11\\n\\n$var12\\n\\n$var13\\n\\n$var14\\n\\n$var15\\n\\n$var16\\n\\n$var17\\n\\n$var18\\n\\n$var19\\n > ./config

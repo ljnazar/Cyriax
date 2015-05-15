@@ -1,0 +1,15 @@
+# Módulo Nro 5: TCP Flooding
+
+# Limitar conexiones TCP de un host en particular
+
+# Se genera una lista negra en la cual van a ingresar direcciones IP a ser bloqueadas. Cuando ingresan 5 paquetes de conexión TCP en 1 segundo desde una misma dirección IP, la misma ingresa a la lista negra. Esta dirección IP será bloqueda hasta que se cumplan 60 segundos de inactividad.
+
+
+$iptables -N tcpflood
+$iptables -N blacklist2
+$iptables -A blacklist2 -m recent --name blacklist2 --set
+$iptables -A blacklist2 -j DROP
+$iptables -A tcpflood -m recent --update --name blacklist2 --seconds 60 --hitcount 1 -j DROP
+$iptables -A tcpflood -m recent --set --name counting2
+$iptables -A tcpflood -m recent --update --name counting2 --seconds 1 --hitcount 6 -j blacklist2
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp -m state --state NEW -j tcpflood

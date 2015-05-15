@@ -1,0 +1,27 @@
+# Módulo Nro 3: ICMP REDIRECT
+
+# Bloqueo de mensajes de redirección
+
+# redirect-network
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type network-redirect -j LOG --log-prefix "ICMP redirect: " --log-level 4
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type network-redirect -j DROP
+
+# redirect-host
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type host-redirect -j LOG --log-prefix "ICMP redirect: " --log-level 4
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type host-redirect -j DROP
+
+# redirect-tos and network
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type TOS-network-redirect -j LOG --log-prefix "ICMP redirect: " --log-level 4
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type TOS-network-redirect -j DROP
+
+# redirect-tos and host
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type TOS-host-redirect -j LOG --log-prefix "ICMP redirect: " --log-level 4
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type TOS-host-redirect -j DROP

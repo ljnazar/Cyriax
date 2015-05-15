@@ -1,0 +1,65 @@
+#!/bin/bash
+# -- UTF 8 --
+
+# Aceptado
+
+iptables -L FORWARD -v -x -n | grep "ACCEPT" > ./Estado_aux/aceptado_aux
+
+# Elimina los espacios en blanco que se encuentran al principio con el comando sed y después convierte los espacios múltiples en un sólo espacio
+
+fmt -u -w 2000 ./Estado_aux/aceptado_aux | sed 's/^ *//g' > ./Estado_aux/aceptado_aux_2
+
+var1=Aceptado:
+
+var2=Paquetes
+
+var3=Bytes
+
+varA=`sed -n '1p' ./Estado_aux/aceptado_aux_2 | cut -f 5 -d ' '`
+
+varB=`sed -n '1p' ./Estado_aux/aceptado_aux_2 | cut -f 7 -d ' ' `
+
+echo $varA $varB >> ./Estado_aux/aceptado_aux_2
+
+
+suma1=`sed '1d' ./Estado_aux/aceptado_aux_2 | cut -f 1 -d ' ' | paste -sd+ | bc`
+
+suma2=`sed '1d' ./Estado_aux/aceptado_aux_2 | cut -f 2 -d ' ' | paste -sd+ | bc`
+
+var4=`echo $var1 $suma1 $var2 $suma2 $var3`
+
+# Descartado
+
+iptables -L FORWARD -v -x -n | grep "DROP" > ./Estado_aux/descartado_aux
+
+fmt -u -w 2000 ./Estado_aux/descartado_aux | sed 's/^ *//g' > ./Estado_aux/descartado_aux_2
+
+var5=Descartado:
+
+echo 0 0 >> ./Estado_aux/descartado_aux_2
+
+suma3=`cut -f 1 -d ' ' ./Estado_aux/descartado_aux_2 | paste -sd+ | bc`
+
+suma4=`cut -f 2 -d ' ' ./Estado_aux/descartado_aux_2 | paste -sd+ | bc`
+
+var6=`echo $var5 $suma3 $var2 $suma4 $var3`
+
+# Rechazado
+
+iptables -L FORWARD -v -x -n | grep "REJECT" > ./Estado_aux/rechazado_aux
+
+fmt -u -w 2000 ./Estado_aux/rechazado_aux | sed 's/^ *//g' > ./Estado_aux/rechazado_aux_2
+
+var7=Rechazado:
+
+echo 0 0 >> ./Estado_aux/rechazado_aux_2
+
+suma5=`cut -f 1 -d ' ' ./Estado_aux/rechazado_aux_2 | paste -sd+ | bc`
+
+suma6=`cut -f 2 -d ' ' ./Estado_aux/rechazado_aux_2 | paste -sd+ | bc`
+
+var8=`echo $var7 $suma5 $var2 $suma6 $var3`
+
+# Guardar en archivo
+
+echo -e $var4\\n$var6\\n$var8 > ./registro_estado

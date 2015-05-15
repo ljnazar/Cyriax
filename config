@@ -1,0 +1,170 @@
+#!/bin/bash
+
+# -- UTF 8 --
+
+iptables="/sbin/iptables"
+
+# Cadena (Usar INPUT si el firewall se ejecuta en el mismo servidor a proteger y usar FORWARD si el firewall se ejecuta en un host aparte y está conectado al Servidor a proteger)
+
+CADENA="FORWARD"
+
+# Limpiar tablas
+
+$iptables -F
+
+$iptables -X
+
+$iptables -Z
+
+# Definir política por defecto
+
+$iptables -P INPUT ACCEPT
+
+$iptables -P FORWARD ACCEPT
+
+$iptables -P OUTPUT ACCEPT
+
+# Conteo de paquetes por protocolo
+
+$iptables -N Conteo
+
+$iptables -A $CADENA -p icmp -j Conteo
+
+$iptables -A $CADENA -p tcp -j Conteo
+
+$iptables -A $CADENA -p udp -j Conteo
+
+# Parámetros del firewall
+
+# IP WEB SERVER
+
+IPWS="10.0.0.1"
+
+# INTERFAZ DE ENTRADA
+
+IFACE_Nro1="eth0"
+
+# INTERFAZ DE SALIDA
+
+IFACE_Nro2="eth1"
+
+
+# Módulos de iptables
+
+
+# Módulo Nro 1: PAQUETE INVÁLIDO
+
+# Descarte de paquete inválido
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -m state --state INVALID -j LOG --log-prefix "Paquete invalido: " --log-level 4
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -m state --state INVALID -j DROP
+
+
+
+# Módulo Nro 2: ICMP FLOODING
+
+# Bloqueo de mensajes ICMP que generan respuesta. Se evita que el firewall sea detectado mediante la devolución de un mensaje de host inalcanzable. Se descartan todos los paquetes y se envia un mensaje de host inalcanzable cada 1 minuto
+
+# Mensajes de solicitud (que generan respuesta):
+
+# echo-request
+# timestamp-request
+# information-request (Obsoleto)
+# address-mask-request (No responde)
+# router-solicitation (No responde)
+
+
+# Bloqueo de mensaje echo-request
+
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type echo-request -j LOG --log-prefix "ICMP echo-request: " --log-level 4
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type echo-request -m limit --limit 1/minute --limit-burst 1 -j REJECT --reject-with icmp-host-unreachable
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type echo-request -j DROP
+
+
+# Bloqueo de mensaje timestamp-request
+
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type timestamp-request -j LOG --log-prefix "ICMP timestamp-request: " --log-level 4
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type timestamp-request -m limit --limit 1/minute --limit-burst 1 -j REJECT --reject-with icmp-host-unreachable
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type timestamp-request -j DROP
+
+
+
+# Módulo Nro 6: Conexiones entrantes excepto port 80
+
+# Se va a dejar abierto el puerto:
+
+# 80/TCP = HTTP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --syn --dport 0:65535 -m state --state NEW -j LOG --log-prefix "TCP - Conexión entrante: " --log-level 4
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --dport 80 --syn -j ACCEPT
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --syn --dport 0:65535 -m state --state NEW -j REJECT --reject-with tcp-reset
+
+
+
+# Módulo Nro 8: TCP con flags inválidos
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags SYN,RST SYN,RST -j DROP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags SYN,FIN SYN,FIN -j DROP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags FIN,RST FIN,RST -j DROP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags SYN,FIN,PSH SYN,FIN,PSH -j DROP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags SYN,FIN,URG SYN,FIN,URG -j DROP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags SYN,FIN,RST SYN,FIN,RST -j DROP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags ALL SYN,FIN,RST,PSH -j DROP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags ALL ACK,RST,SYN,FIN -j DROP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags ALL FIN,URG,PSH -j DROP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags ALL SYN,RST,ACK,FIN,URG -j DROP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags ALL SYN,RST,ACK,FIN,PSH -j DROP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags ALL ALL -j DROP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --tcp-flags ALL NONE -j DROP
+
+
+
+# Módulo Nro 9: UDP Flooding
+
+# Limitar paquetes UDP de un host en particular
+
+# Se genera una lista negra en la cual van a ingresar direcciones IP a ser bloqueadas. Cuando ingresan 5 paquetes UDP en 1 segundo desde una misma dirección IP, la misma ingresa a la lista negra. Esta dirección IP será bloqueda hasta que se cumplan 60 segundos de inactividad.
+
+
+$iptables -N udpflood
+$iptables -N blacklist3
+$iptables -A blacklist3 -m recent --name blacklist3 --set
+$iptables -A blacklist3 -j DROP
+$iptables -A udpflood -m recent --update --name blacklist3 --seconds 60 --hitcount 1 -j DROP
+$iptables -A udpflood -m recent --set --name counting3
+$iptables -A udpflood -m recent --update --name counting3 --seconds 1 --hitcount 6 -j blacklist3
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p udp -m state --state NEW -j udpflood
+
+
+
+# Módulo Nro 11: UDP salientes
+
+# Descarta los paquetes salientes desde el servidor para evitar que salgan clandestinamente paquetes UDP desde el servidor.
+
+$iptables -A $CADENA -o $IFACE_Nro1 -p udp --dport 0:65535 -m state --state NEW -j LOG --log-prefix "UDP Saliente: " --log-level 4
+
+$iptables -A $CADENA -o $IFACE_Nro1 -p udp --dport 0:65535 -m state --state NEW -j DROP
+
+
+
