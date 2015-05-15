@@ -1,8 +1,11 @@
 # Cyriax
 
+
 Firewall con funcionalidades de capa de aplicación del Modelo TCP/IP
 
+
 Necesario para que Cyriax funcione:
+
 
 1) Establecer el LOG para iptables, ya que ese LOG sirve para visualizar el bloqueo de los ataques en el software.
 
@@ -14,15 +17,16 @@ kern.warning /var/log/iptables.log
 
 Luego necesitamos reiniciar el servidor rsyslog (o su versión antigua /etc/syslog.conf).
 
-# /etc/init.d/rsyslog restart
+/etc/init.d/rsyslog restart
 
 
 2) Instalar librerías Qt
 
-# apt-get install libqt4-sql-mysql
+apt-get install libqt4-sql-mysql
 
-# apt-get install libqt4-gui
+apt-get install libqt4-gui
+
 
 3) Ir al directorio de Cyriax y dar permisos de ejecución al contenido de la carpeta Firewall 
 
-# chmod +x -R Firewall
+chmod +x -R Firewall
