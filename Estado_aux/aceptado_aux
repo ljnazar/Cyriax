@@ -1,2 +1,0 @@
-Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
-       0        0 ACCEPT     tcp  --  eth0   *       0.0.0.0/0            10.0.0.1             tcp dpt:80flags: 0x17/0x02
