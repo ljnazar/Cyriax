@@ -11,21 +11,21 @@
 #define UI_AGREGARREGLAS_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QCheckBox>
-#include <QtGui/QComboBox>
-#include <QtGui/QGridLayout>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QSpacerItem>
-#include <QtGui/QTimeEdit>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTimeEdit>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -307,25 +307,25 @@ public:
 
     void retranslateUi(QWidget *AgregarReglas)
     {
-        AgregarReglas->setWindowTitle(QApplication::translate("AgregarReglas", "Agregar regla manualmente", 0, QApplication::UnicodeUTF8));
-        label_5->setText(QApplication::translate("AgregarReglas", "Puerto de origen", 0, QApplication::UnicodeUTF8));
-        label_12->setText(QApplication::translate("AgregarReglas", "ID", 0, QApplication::UnicodeUTF8));
-        label_6->setText(QApplication::translate("AgregarReglas", "Puerto de destino", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("AgregarReglas", "IP destino", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("AgregarReglas", "Interfaz", 0, QApplication::UnicodeUTF8));
-        label_8->setText(QApplication::translate("AgregarReglas", "String", 0, QApplication::UnicodeUTF8));
-        label_4->setText(QApplication::translate("AgregarReglas", "Protocolo", 0, QApplication::UnicodeUTF8));
-        label_11->setText(QApplication::translate("AgregarReglas", "Acci\303\263n", 0, QApplication::UnicodeUTF8));
-        label_9->setText(QApplication::translate("AgregarReglas", "Tiempo de inicio", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("AgregarReglas", "IP origen", 0, QApplication::UnicodeUTF8));
-        label_10->setText(QApplication::translate("AgregarReglas", "Tiempo de finalizaci\303\263n", 0, QApplication::UnicodeUTF8));
+        AgregarReglas->setWindowTitle(QApplication::translate("AgregarReglas", "Agregar regla manualmente", 0));
+        label_5->setText(QApplication::translate("AgregarReglas", "Puerto de origen", 0));
+        label_12->setText(QApplication::translate("AgregarReglas", "ID", 0));
+        label_6->setText(QApplication::translate("AgregarReglas", "Puerto de destino", 0));
+        label_3->setText(QApplication::translate("AgregarReglas", "IP destino", 0));
+        label->setText(QApplication::translate("AgregarReglas", "Interfaz", 0));
+        label_8->setText(QApplication::translate("AgregarReglas", "String", 0));
+        label_4->setText(QApplication::translate("AgregarReglas", "Protocolo", 0));
+        label_11->setText(QApplication::translate("AgregarReglas", "Acci\303\263n", 0));
+        label_9->setText(QApplication::translate("AgregarReglas", "Tiempo de inicio", 0));
+        label_2->setText(QApplication::translate("AgregarReglas", "IP origen", 0));
+        label_10->setText(QApplication::translate("AgregarReglas", "Tiempo de finalizaci\303\263n", 0));
         lineEdit->setText(QString());
         lineEdit_5->setText(QString());
         lineEdit_2->setText(QString());
-        checkBox->setText(QApplication::translate("AgregarReglas", "Habilitar", 0, QApplication::UnicodeUTF8));
-        label_7->setText(QApplication::translate("AgregarReglas", "REGLA DE FILTRADO", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("AgregarReglas", "GUARDAR REGLA", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("AgregarReglas", "CANCELAR", 0, QApplication::UnicodeUTF8));
+        checkBox->setText(QApplication::translate("AgregarReglas", "Habilitar", 0));
+        label_7->setText(QApplication::translate("AgregarReglas", "REGLA DE FILTRADO", 0));
+        pushButton->setText(QApplication::translate("AgregarReglas", "GUARDAR REGLA", 0));
+        pushButton_2->setText(QApplication::translate("AgregarReglas", "CANCELAR", 0));
     } // retranslateUi
 
 };

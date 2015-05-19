@@ -11,16 +11,16 @@
 #define UI_CONFBD_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QGridLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QSpacerItem>
-#include <QtGui/QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -170,17 +170,17 @@ public:
 
     void retranslateUi(QWidget *confBD)
     {
-        confBD->setWindowTitle(QApplication::translate("confBD", "Conexi\303\263n con la BD", 0, QApplication::UnicodeUTF8));
-        lineEdit_5->setText(QApplication::translate("confBD", "Cyriax", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("confBD", "Driver", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("confBD", "Host Name", 0, QApplication::UnicodeUTF8));
-        label_6->setText(QApplication::translate("confBD", "Database Name", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("confBD", "ACEPTAR", 0, QApplication::UnicodeUTF8));
-        lineEdit->setText(QApplication::translate("confBD", "MYSQL", 0, QApplication::UnicodeUTF8));
-        label_4->setText(QApplication::translate("confBD", "User Name", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("confBD", "CANCELAR", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("confBD", "PAR\303\201METROS DE LA BASE DE DATOS", 0, QApplication::UnicodeUTF8));
-        label_5->setText(QApplication::translate("confBD", "Password", 0, QApplication::UnicodeUTF8));
+        confBD->setWindowTitle(QApplication::translate("confBD", "Conexi\303\263n con la BD", 0));
+        lineEdit_5->setText(QApplication::translate("confBD", "Cyriax", 0));
+        label_2->setText(QApplication::translate("confBD", "Driver", 0));
+        label_3->setText(QApplication::translate("confBD", "Host Name", 0));
+        label_6->setText(QApplication::translate("confBD", "Database Name", 0));
+        pushButton->setText(QApplication::translate("confBD", "ACEPTAR", 0));
+        lineEdit->setText(QApplication::translate("confBD", "MYSQL", 0));
+        label_4->setText(QApplication::translate("confBD", "User Name", 0));
+        pushButton_2->setText(QApplication::translate("confBD", "CANCELAR", 0));
+        label->setText(QApplication::translate("confBD", "PAR\303\201METROS DE LA BASE DE DATOS", 0));
+        label_5->setText(QApplication::translate("confBD", "Password", 0));
     } // retranslateUi
 
 };

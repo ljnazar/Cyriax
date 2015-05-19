@@ -46,16 +46,12 @@
 #include <QFileDialog>
 
 
+
 Firewall::Firewall(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Firewall)
 {
     ui->setupUi(this);
-
-
-    // Poner codificació UTF-8 para evitar conflictos
-
-    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
 
     ///////////////////////////////////////////////////////////////////////////////
 

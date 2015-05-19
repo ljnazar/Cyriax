@@ -11,19 +11,19 @@
 #define UI_AGREGARREGLAWEB_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QCheckBox>
-#include <QtGui/QComboBox>
-#include <QtGui/QGridLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QSpacerItem>
-#include <QtGui/QTimeEdit>
-#include <QtGui/QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTimeEdit>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -191,18 +191,18 @@ public:
 
     void retranslateUi(QWidget *AgregarReglaWeb)
     {
-        AgregarReglaWeb->setWindowTitle(QApplication::translate("AgregarReglaWeb", "Agregar regla manualmente", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("AgregarReglaWeb", "GUARDAR REGLA", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("AgregarReglaWeb", "CANCELAR", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("AgregarReglaWeb", "Sitio Web", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("AgregarReglaWeb", "Texto/Palabra/C\303\263digo", 0, QApplication::UnicodeUTF8));
-        label_4->setText(QApplication::translate("AgregarReglaWeb", "Tiempo de inicio", 0, QApplication::UnicodeUTF8));
-        label_5->setText(QApplication::translate("AgregarReglaWeb", "Tiempo de finalizaci\303\263n", 0, QApplication::UnicodeUTF8));
-        label_6->setText(QApplication::translate("AgregarReglaWeb", "Acci\303\263n", 0, QApplication::UnicodeUTF8));
-        label_7->setText(QApplication::translate("AgregarReglaWeb", "ID", 0, QApplication::UnicodeUTF8));
-        checkBox->setText(QApplication::translate("AgregarReglaWeb", "Habilitar", 0, QApplication::UnicodeUTF8));
+        AgregarReglaWeb->setWindowTitle(QApplication::translate("AgregarReglaWeb", "Agregar regla manualmente", 0));
+        pushButton->setText(QApplication::translate("AgregarReglaWeb", "GUARDAR REGLA", 0));
+        pushButton_2->setText(QApplication::translate("AgregarReglaWeb", "CANCELAR", 0));
+        label_2->setText(QApplication::translate("AgregarReglaWeb", "Sitio Web", 0));
+        label_3->setText(QApplication::translate("AgregarReglaWeb", "Texto/Palabra/C\303\263digo", 0));
+        label_4->setText(QApplication::translate("AgregarReglaWeb", "Tiempo de inicio", 0));
+        label_5->setText(QApplication::translate("AgregarReglaWeb", "Tiempo de finalizaci\303\263n", 0));
+        label_6->setText(QApplication::translate("AgregarReglaWeb", "Acci\303\263n", 0));
+        label_7->setText(QApplication::translate("AgregarReglaWeb", "ID", 0));
+        checkBox->setText(QApplication::translate("AgregarReglaWeb", "Habilitar", 0));
         lineEdit->setText(QString());
-        label->setText(QApplication::translate("AgregarReglaWeb", "REGLA DE FILTRADO", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("AgregarReglaWeb", "REGLA DE FILTRADO", 0));
     } // retranslateUi
 
 };

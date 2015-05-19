@@ -11,16 +11,16 @@
 #define UI_ELIMINARREGLAS_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QGridLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QSpacerItem>
-#include <QtGui/QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -123,10 +123,10 @@ public:
 
     void retranslateUi(QWidget *EliminarReglas)
     {
-        EliminarReglas->setWindowTitle(QApplication::translate("EliminarReglas", "Eliminar regla", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("EliminarReglas", "Introduzca el n\303\272mero de ID", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("EliminarReglas", "ELIMINAR", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("EliminarReglas", "CANCELAR", 0, QApplication::UnicodeUTF8));
+        EliminarReglas->setWindowTitle(QApplication::translate("EliminarReglas", "Eliminar regla", 0));
+        label->setText(QApplication::translate("EliminarReglas", "Introduzca el n\303\272mero de ID", 0));
+        pushButton->setText(QApplication::translate("EliminarReglas", "ELIMINAR", 0));
+        pushButton_2->setText(QApplication::translate("EliminarReglas", "CANCELAR", 0));
     } // retranslateUi
 
 };

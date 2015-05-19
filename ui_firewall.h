@@ -11,18 +11,18 @@
 #define UI_FIREWALL_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QComboBox>
-#include <QtGui/QGraphicsView>
-#include <QtGui/QGridLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QPlainTextEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QTextEdit>
-#include <QtGui/QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QGraphicsView>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QPlainTextEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QTextEdit>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -239,24 +239,24 @@ public:
 
     void retranslateUi(QWidget *Firewall)
     {
-        Firewall->setWindowTitle(QApplication::translate("Firewall", "\\-->  CYRIAX  <--/", 0, QApplication::UnicodeUTF8));
+        Firewall->setWindowTitle(QApplication::translate("Firewall", "\\-->  CYRIAX  <--/", 0));
         textEdit_2->setHtml(QApplication::translate("Firewall", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Cantarell'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("Firewall", "ESTADO DEL FIREWALL", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", 0));
+        label->setText(QApplication::translate("Firewall", "ESTADO DEL FIREWALL", 0));
         textEdit->setHtml(QApplication::translate("Firewall", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Cantarell'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif';\"><br /></p></body></html>", 0, QApplication::UnicodeUTF8));
-        pushButton_5->setText(QApplication::translate("Firewall", "LIMPIAR LOG", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("Firewall", "ABOUT CYRIAX", 0, QApplication::UnicodeUTF8));
-        pushButton_4->setText(QApplication::translate("Firewall", "AGREGAR REGLAS", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("Firewall", "REGISTRO DEL FIREWALL", 0, QApplication::UnicodeUTF8));
-        pushButton_6->setText(QApplication::translate("Firewall", "GUARDAR LOG", 0, QApplication::UnicodeUTF8));
-        pushButton_3->setText(QApplication::translate("Firewall", "CONFIGURACI\303\223N", 0, QApplication::UnicodeUTF8));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif';\"><br /></p></body></html>", 0));
+        pushButton_5->setText(QApplication::translate("Firewall", "LIMPIAR LOG", 0));
+        pushButton_2->setText(QApplication::translate("Firewall", "ABOUT CYRIAX", 0));
+        pushButton_4->setText(QApplication::translate("Firewall", "AGREGAR REGLAS", 0));
+        label_2->setText(QApplication::translate("Firewall", "REGISTRO DEL FIREWALL", 0));
+        pushButton_6->setText(QApplication::translate("Firewall", "GUARDAR LOG", 0));
+        pushButton_3->setText(QApplication::translate("Firewall", "CONFIGURACI\303\223N", 0));
     } // retranslateUi
 
 };

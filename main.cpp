@@ -33,7 +33,7 @@
 #include "firewall.h"
 
 #include <QApplication>
-#include <QTextCodec>
+#include <QtWidgets>
 
 
 int main(int argc, char *argv[])
@@ -46,11 +46,6 @@ int main(int argc, char *argv[])
 
     Firewall w;
     w.show();
-
-
-    // Poner codificació UTF-8 para evitar conflictos
-
-    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
 
 
     return a.exec();

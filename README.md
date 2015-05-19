@@ -22,10 +22,11 @@ Luego necesitamos reiniciar el servidor rsyslog (o su versión antigua /etc/sysl
 
 2) Instalar librerías Qt
 
-apt-get install libqt4-sql-mysql
+apt-get install libqt5sql5-mysql
 
-apt-get install libqt4-gui
+apt-get install libqt5gui5
 
+apt-get install libqt5widgets5
 
 3) Ir al directorio de Cyriax y dar permisos de ejecución al contenido de la carpeta Cyriax 
 

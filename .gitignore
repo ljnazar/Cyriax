@@ -1,0 +1,7 @@
+# a comment – this is ignored
+
+*.o
+moc_*
+Makefile
+Cyriax.pro.user
+Cyriax

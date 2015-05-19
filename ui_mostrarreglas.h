@@ -11,14 +11,14 @@
 #define UI_MOSTRARREGLAS_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QGridLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QPushButton>
-#include <QtGui/QTableView>
-#include <QtGui/QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableView>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -87,11 +87,11 @@ public:
 
     void retranslateUi(QWidget *MostrarReglas)
     {
-        MostrarReglas->setWindowTitle(QApplication::translate("MostrarReglas", "Reglas cargadas", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("MostrarReglas", "AGREGAR REGLA [modo avanzado]", 0, QApplication::UnicodeUTF8));
-        pushButton_3->setText(QApplication::translate("MostrarReglas", "AGREGAR REGLA [Sitio Web]", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("MostrarReglas", "ELIMINAR REGLA", 0, QApplication::UnicodeUTF8));
-        pushButton_4->setText(QApplication::translate("MostrarReglas", "SALIR", 0, QApplication::UnicodeUTF8));
+        MostrarReglas->setWindowTitle(QApplication::translate("MostrarReglas", "Reglas cargadas", 0));
+        pushButton->setText(QApplication::translate("MostrarReglas", "AGREGAR REGLA [modo avanzado]", 0));
+        pushButton_3->setText(QApplication::translate("MostrarReglas", "AGREGAR REGLA [Sitio Web]", 0));
+        pushButton_2->setText(QApplication::translate("MostrarReglas", "ELIMINAR REGLA", 0));
+        pushButton_4->setText(QApplication::translate("MostrarReglas", "SALIR", 0));
     } // retranslateUi
 
 };
