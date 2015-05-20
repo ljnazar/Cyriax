@@ -5,7 +5,7 @@
 
 # El comando sed elimina los espacios en blanco que se encuentran al principio, después el comando fmt convierte los espacios múltiples en un sólo espacio. Luego se utiliza el comando cut para mostrar un solo campo.
 
-iptables -L FORWARD -v -x -n | grep "ACCEPT" | fmt -u -w 2000 ./Estado_aux/aceptado_aux | sed 's/^ *//g' > ./Estado_aux/aceptado_aux
+iptables -L FORWARD -v -x -n | grep "ACCEPT" | fmt -u -w 2000 | sed 's/^ *//g' > ./Estado_aux/aceptado_aux
 
 var1=Aceptado:
 
