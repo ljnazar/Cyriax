@@ -41,19 +41,29 @@
    <item row="6" column="2">
     <widget class="QLineEdit" name="lineEdit_5">
      <property name="text">
-      <string>Cyriax</string>
+      <string>         Cyriax</string>
      </property>
     </widget>
    </item>
    <item row="5" column="2">
     <widget class="QLineEdit" name="lineEdit_4">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
      <property name="echoMode">
       <enum>QLineEdit::Password</enum>
      </property>
     </widget>
    </item>
    <item row="3" column="2">
-    <widget class="QLineEdit" name="lineEdit_2"/>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </item>
    <item row="2" column="0">
     <widget class="QLabel" name="label_2">
@@ -121,8 +131,11 @@
    </item>
    <item row="2" column="2">
     <widget class="QLineEdit" name="lineEdit">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
      <property name="text">
-      <string>MYSQL</string>
+      <string>        MYSQL</string>
      </property>
     </widget>
    </item>
@@ -140,7 +153,11 @@
     </widget>
    </item>
    <item row="4" column="2">
-    <widget class="QLineEdit" name="lineEdit_3"/>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="8" column="2">
     <widget class="QPushButton" name="pushButton_2">
@@ -176,7 +193,7 @@
       </font>
      </property>
      <property name="text">
-      <string>PARÁMETROS DE LA BASE DE DATOS</string>
+      <string>PARAMETROS DE LA BASE DE DATOS</string>
      </property>
     </widget>
    </item>

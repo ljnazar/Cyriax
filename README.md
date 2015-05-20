@@ -28,6 +28,10 @@ apt-get install libqt5gui5
 
 apt-get install libqt5widgets5
 
-3) Ir al directorio de Cyriax y dar permisos de ejecución al contenido de la carpeta Cyriax 
+3) Instalar MySQL
+
+apt-get install mysql-server
+
+4) Ir al directorio de Cyriax y dar permisos de ejecución al contenido de la carpeta Cyriax 
 
 chmod +x -R Cyriax

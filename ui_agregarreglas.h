@@ -1,8 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'agregarreglas.ui'
 **
-** Created: Fri May 15 02:17:32 2015
-**      by: Qt User Interface Compiler version 4.8.2
+** Created by: Qt User Interface Compiler version 5.3.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -71,80 +70,80 @@ public:
     void setupUi(QWidget *AgregarReglas)
     {
         if (AgregarReglas->objectName().isEmpty())
-            AgregarReglas->setObjectName(QString::fromUtf8("AgregarReglas"));
+            AgregarReglas->setObjectName(QStringLiteral("AgregarReglas"));
         AgregarReglas->setWindowModality(Qt::NonModal);
         AgregarReglas->resize(350, 427);
         AgregarReglas->setMinimumSize(QSize(0, 0));
         AgregarReglas->setMaximumSize(QSize(350, 445));
         gridLayout_5 = new QGridLayout(AgregarReglas);
-        gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
+        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
         gridLayout = new QGridLayout();
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
         label_5 = new QLabel(AgregarReglas);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setObjectName(QStringLiteral("label_5"));
         QFont font;
-        font.setFamily(QString::fromUtf8("Cantarell"));
+        font.setFamily(QStringLiteral("Cantarell"));
         font.setPointSize(11);
         label_5->setFont(font);
 
         gridLayout->addWidget(label_5, 5, 0, 1, 1);
 
         label_12 = new QLabel(AgregarReglas);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
+        label_12->setObjectName(QStringLiteral("label_12"));
         label_12->setFont(font);
 
         gridLayout->addWidget(label_12, 12, 0, 1, 1);
 
         label_6 = new QLabel(AgregarReglas);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setObjectName(QStringLiteral("label_6"));
         label_6->setFont(font);
 
         gridLayout->addWidget(label_6, 6, 0, 1, 1);
 
         label_3 = new QLabel(AgregarReglas);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setFont(font);
 
         gridLayout->addWidget(label_3, 3, 0, 1, 1);
 
         label = new QLabel(AgregarReglas);
-        label->setObjectName(QString::fromUtf8("label"));
+        label->setObjectName(QStringLiteral("label"));
         label->setFont(font);
 
         gridLayout->addWidget(label, 1, 0, 1, 1);
 
         label_8 = new QLabel(AgregarReglas);
-        label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setObjectName(QStringLiteral("label_8"));
         label_8->setFont(font);
 
         gridLayout->addWidget(label_8, 7, 0, 1, 1);
 
         label_4 = new QLabel(AgregarReglas);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setFont(font);
 
         gridLayout->addWidget(label_4, 4, 0, 1, 1);
 
         label_11 = new QLabel(AgregarReglas);
-        label_11->setObjectName(QString::fromUtf8("label_11"));
+        label_11->setObjectName(QStringLiteral("label_11"));
         label_11->setFont(font);
 
         gridLayout->addWidget(label_11, 11, 0, 1, 1);
 
         label_9 = new QLabel(AgregarReglas);
-        label_9->setObjectName(QString::fromUtf8("label_9"));
+        label_9->setObjectName(QStringLiteral("label_9"));
         label_9->setFont(font);
 
         gridLayout->addWidget(label_9, 9, 0, 1, 1);
 
         label_2 = new QLabel(AgregarReglas);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setFont(font);
 
         gridLayout->addWidget(label_2, 2, 0, 1, 1);
 
         label_10 = new QLabel(AgregarReglas);
-        label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setObjectName(QStringLiteral("label_10"));
         label_10->setFont(font);
 
         gridLayout->addWidget(label_10, 10, 0, 1, 1);
@@ -161,78 +160,95 @@ public:
         gridLayout_5->addItem(verticalSpacer_2, 2, 0, 1, 1);
 
         gridLayout_2 = new QGridLayout();
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         lineEdit = new QLineEdit(AgregarReglas);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
         lineEdit->setMaximumSize(QSize(60, 24));
+        lineEdit->setAutoFillBackground(true);
 
         gridLayout_2->addWidget(lineEdit, 0, 0, 1, 1);
 
         lineEdit_3 = new QLineEdit(AgregarReglas);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
         lineEdit_3->setMaximumSize(QSize(140, 24));
+        lineEdit_3->setAutoFillBackground(true);
 
         gridLayout_2->addWidget(lineEdit_3, 2, 0, 1, 3);
 
         lineEdit_5 = new QLineEdit(AgregarReglas);
-        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
+        lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
         lineEdit_5->setMaximumSize(QSize(60, 24));
+        lineEdit_5->setAutoFillBackground(true);
 
         gridLayout_2->addWidget(lineEdit_5, 4, 0, 1, 1);
 
         lineEdit_4 = new QLineEdit(AgregarReglas);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
         lineEdit_4->setMaximumSize(QSize(60, 24));
+        lineEdit_4->setAutoFillBackground(true);
 
         gridLayout_2->addWidget(lineEdit_4, 3, 0, 1, 1);
 
         lineEdit_2 = new QLineEdit(AgregarReglas);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
         lineEdit_2->setMaximumSize(QSize(140, 24));
+        lineEdit_2->setAutoFillBackground(true);
 
         gridLayout_2->addWidget(lineEdit_2, 1, 0, 1, 3);
 
         lineEdit_6 = new QLineEdit(AgregarReglas);
-        lineEdit_6->setObjectName(QString::fromUtf8("lineEdit_6"));
+        lineEdit_6->setObjectName(QStringLiteral("lineEdit_6"));
         lineEdit_6->setMaximumSize(QSize(60, 24));
+        lineEdit_6->setAutoFillBackground(true);
 
         gridLayout_2->addWidget(lineEdit_6, 5, 0, 1, 1);
 
         timeEdit_2 = new QTimeEdit(AgregarReglas);
-        timeEdit_2->setObjectName(QString::fromUtf8("timeEdit_2"));
-        timeEdit_2->setMaximumSize(QSize(60, 24));
+        timeEdit_2->setObjectName(QStringLiteral("timeEdit_2"));
+        timeEdit_2->setMinimumSize(QSize(74, 24));
+        timeEdit_2->setMaximumSize(QSize(74, 24));
+        timeEdit_2->setAutoFillBackground(true);
 
         gridLayout_2->addWidget(timeEdit_2, 10, 0, 1, 1);
 
         comboBox = new QComboBox(AgregarReglas);
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        comboBox->setObjectName(QStringLiteral("comboBox"));
         comboBox->setMaximumSize(QSize(82, 24));
         comboBox->setBaseSize(QSize(82, 24));
+        comboBox->setAutoFillBackground(true);
 
         gridLayout_2->addWidget(comboBox, 0, 1, 1, 2);
 
         lineEdit_8 = new QLineEdit(AgregarReglas);
-        lineEdit_8->setObjectName(QString::fromUtf8("lineEdit_8"));
-        lineEdit_8->setMaximumSize(QSize(25, 24));
+        lineEdit_8->setObjectName(QStringLiteral("lineEdit_8"));
+        lineEdit_8->setMinimumSize(QSize(40, 24));
+        lineEdit_8->setMaximumSize(QSize(40, 24));
+        lineEdit_8->setAutoFillBackground(true);
 
         gridLayout_2->addWidget(lineEdit_8, 12, 0, 1, 1);
 
         lineEdit_7 = new QLineEdit(AgregarReglas);
-        lineEdit_7->setObjectName(QString::fromUtf8("lineEdit_7"));
+        lineEdit_7->setObjectName(QStringLiteral("lineEdit_7"));
         lineEdit_7->setMaximumSize(QSize(200, 24));
+        lineEdit_7->setAutoFillBackground(true);
 
         gridLayout_2->addWidget(lineEdit_7, 6, 0, 1, 3);
 
         timeEdit = new QTimeEdit(AgregarReglas);
-        timeEdit->setObjectName(QString::fromUtf8("timeEdit"));
-        timeEdit->setMaximumSize(QSize(60, 24));
+        timeEdit->setObjectName(QStringLiteral("timeEdit"));
+        timeEdit->setMinimumSize(QSize(74, 24));
+        timeEdit->setMaximumSize(QSize(74, 24));
+        timeEdit->setAutoFillBackground(true);
+        timeEdit->setWrapping(false);
+        timeEdit->setCurrentSection(QDateTimeEdit::HourSection);
 
         gridLayout_2->addWidget(timeEdit, 9, 0, 1, 1);
 
         verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         checkBox = new QCheckBox(AgregarReglas);
-        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        checkBox->setObjectName(QStringLiteral("checkBox"));
+        checkBox->setAutoFillBackground(true);
 
         verticalLayout->addWidget(checkBox);
 
@@ -240,10 +256,11 @@ public:
         gridLayout_2->addLayout(verticalLayout, 9, 1, 2, 2);
 
         comboBox_2 = new QComboBox(AgregarReglas);
-        comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
+        comboBox_2->setObjectName(QStringLiteral("comboBox_2"));
         comboBox_2->setMinimumSize(QSize(92, 24));
         comboBox_2->setMaximumSize(QSize(92, 24));
         comboBox_2->setBaseSize(QSize(0, 0));
+        comboBox_2->setAutoFillBackground(true);
 
         gridLayout_2->addWidget(comboBox_2, 11, 0, 1, 1);
 
@@ -251,20 +268,20 @@ public:
         gridLayout_5->addLayout(gridLayout_2, 3, 1, 1, 1);
 
         label_7 = new QLabel(AgregarReglas);
-        label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setObjectName(QStringLiteral("label_7"));
         label_7->setMaximumSize(QSize(158, 21));
         label_7->setFont(font);
 
         gridLayout_5->addWidget(label_7, 0, 0, 1, 1);
 
         horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         pushButton = new QPushButton(AgregarReglas);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setMinimumSize(QSize(150, 30));
         pushButton->setMaximumSize(QSize(150, 30));
         QFont font1;
-        font1.setFamily(QString::fromUtf8("Cantarell"));
+        font1.setFamily(QStringLiteral("Cantarell"));
         font1.setPointSize(10);
         pushButton->setFont(font1);
 
@@ -275,7 +292,7 @@ public:
         horizontalLayout->addItem(horizontalSpacer);
 
         pushButton_2 = new QPushButton(AgregarReglas);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
         pushButton_2->setMinimumSize(QSize(150, 30));
         pushButton_2->setMaximumSize(QSize(150, 30));
         pushButton_2->setFont(font1);
@@ -322,6 +339,9 @@ public:
         lineEdit->setText(QString());
         lineEdit_5->setText(QString());
         lineEdit_2->setText(QString());
+        timeEdit_2->setDisplayFormat(QApplication::translate("AgregarReglas", "hh:mm", 0));
+        lineEdit_8->setText(QString());
+        timeEdit->setDisplayFormat(QApplication::translate("AgregarReglas", "hh:mm", 0));
         checkBox->setText(QApplication::translate("AgregarReglas", "Habilitar", 0));
         label_7->setText(QApplication::translate("AgregarReglas", "REGLA DE FILTRADO", 0));
         pushButton->setText(QApplication::translate("AgregarReglas", "GUARDAR REGLA", 0));

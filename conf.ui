@@ -75,6 +75,9 @@
        <property name="autoFillBackground">
         <bool>false</bool>
        </property>
+       <property name="inputMethodHints">
+        <set>Qt::ImhNone</set>
+       </property>
        <property name="text">
         <string>Paquetes inválidos</string>
        </property>
@@ -243,7 +246,7 @@
       </font>
      </property>
      <property name="text">
-      <string>PARÁMETROS DEL FIREWALL</string>
+      <string>PARAMETROS DEL FIREWALL</string>
      </property>
     </widget>
    </item>
@@ -589,6 +592,9 @@
          <height>24</height>
         </size>
        </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -671,6 +677,9 @@
          <height>24</height>
         </size>
        </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="1" column="4">
@@ -686,6 +695,9 @@
          <width>50</width>
          <height>24</height>
         </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
        </property>
        <property name="text">
         <string/>

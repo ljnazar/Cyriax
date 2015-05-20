@@ -101,6 +101,7 @@ public:
         checkBox_3->setMouseTracking(true);
         checkBox_3->setAcceptDrops(false);
         checkBox_3->setAutoFillBackground(false);
+        checkBox_3->setInputMethodHints(Qt::ImhNone);
         checkBox_3->setCheckable(true);
         checkBox_3->setChecked(false);
         checkBox_3->setAutoRepeat(false);
@@ -277,6 +278,7 @@ public:
         lineEdit->setEnabled(true);
         lineEdit->setMinimumSize(QSize(120, 24));
         lineEdit->setMaximumSize(QSize(120, 24));
+        lineEdit->setAutoFillBackground(true);
 
         gridLayout_9->addWidget(lineEdit, 0, 4, 1, 1);
 
@@ -304,6 +306,7 @@ public:
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
         lineEdit_2->setMinimumSize(QSize(50, 24));
         lineEdit_2->setMaximumSize(QSize(50, 24));
+        lineEdit_2->setAutoFillBackground(true);
 
         gridLayout_9->addWidget(lineEdit_2, 3, 4, 1, 1);
 
@@ -311,6 +314,7 @@ public:
         lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
         lineEdit_3->setMinimumSize(QSize(50, 24));
         lineEdit_3->setMaximumSize(QSize(50, 24));
+        lineEdit_3->setAutoFillBackground(true);
 
         gridLayout_9->addWidget(lineEdit_3, 1, 4, 1, 1);
 
@@ -408,7 +412,7 @@ public:
         checkBox_5->setText(QApplication::translate("Conf", "TCP Flooding", 0));
         checkBox_4->setText(QApplication::translate("Conf", "TCP_SYN Erroneo", 0));
         checkBox->setText(QApplication::translate("Conf", "ICMP Flooding", 0));
-        label->setText(QApplication::translate("Conf", "PAR\303\201METROS DEL FIREWALL", 0));
+        label->setText(QApplication::translate("Conf", "PARAMETROS DEL FIREWALL", 0));
         checkBox_12->setText(QApplication::translate("Conf", "SSH Brute force", 0));
         checkBox_10->setText(QApplication::translate("Conf", "UDP entrantes", 0));
         checkBox_11->setText(QApplication::translate("Conf", "UDP salientes", 0));

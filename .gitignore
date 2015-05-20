@@ -2,6 +2,13 @@
 
 *.o
 moc_*
+ui_*
+config
+regla
 Makefile
 Cyriax.pro.user
 Cyriax
+Estado_aux/aceptado_aux
+Estado_aux/descartado_aux
+Estado_aux/rechazado_aux
+

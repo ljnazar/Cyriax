@@ -62,15 +62,21 @@
       <widget class="QTimeEdit" name="timeEdit">
        <property name="minimumSize">
         <size>
-         <width>60</width>
+         <width>74</width>
          <height>24</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>60</width>
+         <width>74</width>
          <height>24</height>
         </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="displayFormat">
+        <string>hh:mm</string>
        </property>
       </widget>
      </item>
@@ -113,6 +119,9 @@
          <height>24</height>
         </size>
        </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="1" column="0">
@@ -132,15 +141,21 @@
       <widget class="QTimeEdit" name="timeEdit_2">
        <property name="minimumSize">
         <size>
-         <width>60</width>
+         <width>74</width>
          <height>24</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>60</width>
+         <width>74</width>
          <height>24</height>
         </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="displayFormat">
+        <string>hh:mm</string>
        </property>
       </widget>
      </item>
@@ -200,15 +215,18 @@
       <widget class="QLineEdit" name="lineEdit_3">
        <property name="minimumSize">
         <size>
-         <width>25</width>
+         <width>40</width>
          <height>24</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>25</width>
+         <width>40</width>
          <height>24</height>
         </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -221,13 +239,20 @@
      </item>
      <item row="0" column="1" colspan="2">
       <widget class="QLineEdit" name="lineEdit">
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
        <property name="text">
         <string/>
        </property>
       </widget>
      </item>
      <item row="1" column="1" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>

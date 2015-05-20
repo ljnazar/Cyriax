@@ -1,8 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'eliminarreglas.ui'
 **
-** Created: Fri May 15 02:10:46 2015
-**      by: Qt User Interface Compiler version 4.8.2
+** Created by: Qt User Interface Compiler version 5.3.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -29,11 +28,9 @@ class Ui_EliminarReglas
 public:
     QGridLayout *gridLayout;
     QGridLayout *gridLayout_2;
-    QSpacerItem *horizontalSpacer_7;
     QSpacerItem *horizontalSpacer_2;
     QSpacerItem *horizontalSpacer_3;
     QLineEdit *lineEdit;
-    QSpacerItem *horizontalSpacer;
     QLabel *label;
     QGridLayout *gridLayout_3;
     QPushButton *pushButton;
@@ -44,41 +41,34 @@ public:
     void setupUi(QWidget *EliminarReglas)
     {
         if (EliminarReglas->objectName().isEmpty())
-            EliminarReglas->setObjectName(QString::fromUtf8("EliminarReglas"));
+            EliminarReglas->setObjectName(QStringLiteral("EliminarReglas"));
         EliminarReglas->resize(256, 110);
         EliminarReglas->setMinimumSize(QSize(256, 110));
         EliminarReglas->setMaximumSize(QSize(256, 110));
         gridLayout = new QGridLayout(EliminarReglas);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout_2 = new QGridLayout();
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer_7, 0, 4, 1, 1);
-
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout_2->addItem(horizontalSpacer_2, 0, 5, 1, 1);
+        gridLayout_2->addItem(horizontalSpacer_2, 0, 3, 1, 1);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout_2->addItem(horizontalSpacer_3, 0, 2, 1, 1);
+        gridLayout_2->addItem(horizontalSpacer_3, 0, 1, 1, 1);
 
         lineEdit = new QLineEdit(EliminarReglas);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setMinimumSize(QSize(0, 0));
-        lineEdit->setMaximumSize(QSize(25, 24));
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setMinimumSize(QSize(30, 24));
+        lineEdit->setMaximumSize(QSize(30, 24));
+        lineEdit->setAutoFillBackground(true);
 
-        gridLayout_2->addWidget(lineEdit, 0, 3, 1, 1);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer, 0, 1, 1, 1);
+        gridLayout_2->addWidget(lineEdit, 0, 2, 1, 1);
 
         label = new QLabel(EliminarReglas);
-        label->setObjectName(QString::fromUtf8("label"));
+        label->setObjectName(QStringLiteral("label"));
         QFont font;
-        font.setFamily(QString::fromUtf8("Cantarell"));
+        font.setFamily(QStringLiteral("Cantarell"));
         font.setPointSize(11);
         label->setFont(font);
 
@@ -88,18 +78,18 @@ public:
         gridLayout->addLayout(gridLayout_2, 1, 2, 1, 1);
 
         gridLayout_3 = new QGridLayout();
-        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
+        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
         pushButton = new QPushButton(EliminarReglas);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setObjectName(QStringLiteral("pushButton"));
         QFont font1;
-        font1.setFamily(QString::fromUtf8("Cantarell"));
+        font1.setFamily(QStringLiteral("Cantarell"));
         font1.setPointSize(10);
         pushButton->setFont(font1);
 
         gridLayout_3->addWidget(pushButton, 0, 0, 1, 1);
 
         pushButton_2 = new QPushButton(EliminarReglas);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
         pushButton_2->setFont(font1);
 
         gridLayout_3->addWidget(pushButton_2, 0, 1, 1, 1);

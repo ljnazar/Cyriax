@@ -212,6 +212,9 @@
          <height>24</height>
         </size>
        </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -225,6 +228,9 @@
          <height>24</height>
         </size>
        </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="4" column="0">
@@ -234,6 +240,9 @@
          <width>60</width>
          <height>24</height>
         </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
        </property>
        <property name="text">
         <string/>
@@ -248,6 +257,9 @@
          <height>24</height>
         </size>
        </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="1" column="0" colspan="3">
@@ -257,6 +269,9 @@
          <width>140</width>
          <height>24</height>
         </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
        </property>
        <property name="text">
         <string/>
@@ -271,15 +286,30 @@
          <height>24</height>
         </size>
        </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="10" column="0">
       <widget class="QTimeEdit" name="timeEdit_2">
-       <property name="maximumSize">
+       <property name="minimumSize">
         <size>
-         <width>60</width>
+         <width>74</width>
          <height>24</height>
         </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>74</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="displayFormat">
+        <string>hh:mm</string>
        </property>
       </widget>
      </item>
@@ -297,15 +327,30 @@
          <height>24</height>
         </size>
        </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="12" column="0">
       <widget class="QLineEdit" name="lineEdit_8">
-       <property name="maximumSize">
+       <property name="minimumSize">
         <size>
-         <width>25</width>
+         <width>40</width>
          <height>24</height>
         </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>
@@ -317,15 +362,36 @@
          <height>24</height>
         </size>
        </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="9" column="0">
       <widget class="QTimeEdit" name="timeEdit">
-       <property name="maximumSize">
+       <property name="minimumSize">
         <size>
-         <width>60</width>
+         <width>74</width>
          <height>24</height>
         </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>74</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="wrapping">
+        <bool>false</bool>
+       </property>
+       <property name="currentSection">
+        <enum>QDateTimeEdit::HourSection</enum>
+       </property>
+       <property name="displayFormat">
+        <string>hh:mm</string>
        </property>
       </widget>
      </item>
@@ -333,6 +399,9 @@
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QCheckBox" name="checkBox">
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
          <property name="text">
           <string>Habilitar</string>
          </property>
@@ -359,6 +428,9 @@
          <width>0</width>
          <height>0</height>
         </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
        </property>
       </widget>
      </item>

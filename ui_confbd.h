@@ -1,8 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'confbd.ui'
 **
-** Created: Fri May 15 02:10:46 2015
-**      by: Qt User Interface Compiler version 4.8.2
+** Created by: Qt User Interface Compiler version 5.3.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -48,7 +47,7 @@ public:
     void setupUi(QWidget *confBD)
     {
         if (confBD->objectName().isEmpty())
-            confBD->setObjectName(QString::fromUtf8("confBD"));
+            confBD->setObjectName(QStringLiteral("confBD"));
         confBD->resize(282, 244);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
@@ -59,73 +58,77 @@ public:
         confBD->setMaximumSize(QSize(282, 244));
         confBD->setBaseSize(QSize(0, 0));
         gridLayout = new QGridLayout(confBD);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
         lineEdit_5 = new QLineEdit(confBD);
-        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
+        lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
 
         gridLayout->addWidget(lineEdit_5, 6, 2, 1, 1);
 
         lineEdit_4 = new QLineEdit(confBD);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
+        lineEdit_4->setAutoFillBackground(true);
         lineEdit_4->setEchoMode(QLineEdit::Password);
 
         gridLayout->addWidget(lineEdit_4, 5, 2, 1, 1);
 
         lineEdit_2 = new QLineEdit(confBD);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        lineEdit_2->setAutoFillBackground(true);
 
         gridLayout->addWidget(lineEdit_2, 3, 2, 1, 1);
 
         label_2 = new QLabel(confBD);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setObjectName(QStringLiteral("label_2"));
         QFont font;
-        font.setFamily(QString::fromUtf8("Cantarell"));
+        font.setFamily(QStringLiteral("Cantarell"));
         font.setPointSize(11);
         label_2->setFont(font);
 
         gridLayout->addWidget(label_2, 2, 0, 1, 1);
 
         label_3 = new QLabel(confBD);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setFont(font);
 
         gridLayout->addWidget(label_3, 3, 0, 1, 1);
 
         label_6 = new QLabel(confBD);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setObjectName(QStringLiteral("label_6"));
         label_6->setFont(font);
 
         gridLayout->addWidget(label_6, 6, 0, 1, 1);
 
         pushButton = new QPushButton(confBD);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setMinimumSize(QSize(115, 30));
         pushButton->setMaximumSize(QSize(115, 30));
         QFont font1;
-        font1.setFamily(QString::fromUtf8("Cantarell"));
+        font1.setFamily(QStringLiteral("Cantarell"));
         font1.setPointSize(10);
         pushButton->setFont(font1);
 
         gridLayout->addWidget(pushButton, 8, 0, 1, 1);
 
         lineEdit = new QLineEdit(confBD);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setAutoFillBackground(false);
 
         gridLayout->addWidget(lineEdit, 2, 2, 1, 1);
 
         label_4 = new QLabel(confBD);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setFont(font);
 
         gridLayout->addWidget(label_4, 4, 0, 1, 1);
 
         lineEdit_3 = new QLineEdit(confBD);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+        lineEdit_3->setAutoFillBackground(true);
 
         gridLayout->addWidget(lineEdit_3, 4, 2, 1, 1);
 
         pushButton_2 = new QPushButton(confBD);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
         pushButton_2->setMinimumSize(QSize(115, 30));
         pushButton_2->setMaximumSize(QSize(115, 30));
         pushButton_2->setFont(font1);
@@ -133,7 +136,7 @@ public:
         gridLayout->addWidget(pushButton_2, 8, 2, 1, 1);
 
         label = new QLabel(confBD);
-        label->setObjectName(QString::fromUtf8("label"));
+        label->setObjectName(QStringLiteral("label"));
         label->setFont(font);
 
         gridLayout->addWidget(label, 0, 0, 1, 3);
@@ -143,7 +146,7 @@ public:
         gridLayout->addItem(verticalSpacer, 1, 0, 1, 1);
 
         label_5 = new QLabel(confBD);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setFont(font);
 
         gridLayout->addWidget(label_5, 5, 0, 1, 1);
@@ -171,15 +174,16 @@ public:
     void retranslateUi(QWidget *confBD)
     {
         confBD->setWindowTitle(QApplication::translate("confBD", "Conexi\303\263n con la BD", 0));
-        lineEdit_5->setText(QApplication::translate("confBD", "Cyriax", 0));
+        lineEdit_5->setText(QApplication::translate("confBD", "         Cyriax", 0));
+        lineEdit_2->setText(QString());
         label_2->setText(QApplication::translate("confBD", "Driver", 0));
         label_3->setText(QApplication::translate("confBD", "Host Name", 0));
         label_6->setText(QApplication::translate("confBD", "Database Name", 0));
         pushButton->setText(QApplication::translate("confBD", "ACEPTAR", 0));
-        lineEdit->setText(QApplication::translate("confBD", "MYSQL", 0));
+        lineEdit->setText(QApplication::translate("confBD", "        MYSQL", 0));
         label_4->setText(QApplication::translate("confBD", "User Name", 0));
         pushButton_2->setText(QApplication::translate("confBD", "CANCELAR", 0));
-        label->setText(QApplication::translate("confBD", "PAR\303\201METROS DE LA BASE DE DATOS", 0));
+        label->setText(QApplication::translate("confBD", "PARAMETROS DE LA BASE DE DATOS", 0));
         label_5->setText(QApplication::translate("confBD", "Password", 0));
     } // retranslateUi
 

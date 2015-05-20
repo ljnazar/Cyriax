@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>901</width>
+    <width>909</width>
     <height>631</height>
    </rect>
   </property>
@@ -318,7 +318,7 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
      <property name="text">
-      <string>CONFIGURACIÓN</string>
+      <string>CONFIGURACION</string>
      </property>
     </widget>
    </item>

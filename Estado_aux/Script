@@ -19,6 +19,8 @@ varB=`sed -n '1p' ./Estado_aux/aceptado_aux | cut -f 7 -d ' ' `
 
 echo $varA $varB >> ./Estado_aux/aceptado_aux
 
+echo 0 0 >> ./Estado_aux/aceptado_aux
+
 suma1=`sed '1d' ./Estado_aux/aceptado_aux | cut -f 1 -d ' ' | paste -sd+ | bc`
 
 suma2=`sed '1d' ./Estado_aux/aceptado_aux | cut -f 2 -d ' ' | paste -sd+ | bc`
