@@ -34,7 +34,6 @@
 #define CONF_H
 
 #include <QWidget>
-#include <QFile>
 
 namespace Ui {
 class Conf;
