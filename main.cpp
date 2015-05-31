@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
     QCoreApplication :: setApplicationName ("Cyriax");
     QCoreApplication :: setApplicationVersion ("1.0.0");
 
-    Firewall 0;
+    Firewall w;
     w.show();
 
 
