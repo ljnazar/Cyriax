@@ -434,6 +434,13 @@
        </property>
       </widget>
      </item>
+     <item row="3" column="1" colspan="2">
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>[icmp/tcp/udp]</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item row="0" column="0">

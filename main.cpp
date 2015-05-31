@@ -48,7 +48,8 @@ int main(int argc, char *argv[])
     w.show();
 
 
-    return -1;
+    return a.exec();
 }
+
 
 
