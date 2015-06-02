@@ -33,7 +33,6 @@
 #include "firewall.h"
 #include "ui_firewall.h"
 #include "conf.h"
-#include "mostrarreglas.h"
 #include "confbd.h"
 
 #include <QMessageBox>

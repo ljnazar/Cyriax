@@ -56,6 +56,9 @@ MostrarReglas::MostrarReglas(QWidget *parent) :
 
 MostrarReglas::~MostrarReglas()
 {
+    delete agregarreglas;
+    delete agregarreglaweb;
+    delete eliminarreglas;
     delete ui;
 }
 
@@ -90,7 +93,7 @@ void MostrarReglas::mostrarTabla()
 
 void MostrarReglas::on_pushButton_clicked()
 {
-    AgregarReglas *agregarreglas=new AgregarReglas();
+    agregarreglas = new AgregarReglas();
     agregarreglas->show();
 
     // Cuando se emite la señal se ejecuta la función mostrartabla
@@ -103,7 +106,7 @@ void MostrarReglas::on_pushButton_clicked()
 
 void MostrarReglas::on_pushButton_2_clicked()
 {
-    EliminarReglas *eliminarreglas = new EliminarReglas();
+    eliminarreglas = new EliminarReglas();
     eliminarreglas->show();
 
     // Cuando se emite la señal se ejecuta la función mostrartabla
@@ -115,7 +118,7 @@ void MostrarReglas::on_pushButton_2_clicked()
 
 void MostrarReglas::on_pushButton_3_clicked()
 {
-    AgregarReglaWeb *agregarreglaweb=new AgregarReglaWeb();
+    agregarreglaweb = new AgregarReglaWeb();
     agregarreglaweb->show();
 
     // Cuando se emite la señal se ejecuta la función mostrartabla

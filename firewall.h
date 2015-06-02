@@ -37,10 +37,8 @@
 #include "confbd.h"
 
 #include <QWidget>
-#include <QGraphicsScene>
 #include <QFileSystemWatcher>
-#include <QTimer>
-#include <QFile>
+
 
 namespace Ui {
 

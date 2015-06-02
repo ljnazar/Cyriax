@@ -33,8 +33,12 @@
 #ifndef MOSTRARREGLAS_H
 #define MOSTRARREGLAS_H
 
+#include "agregarreglas.h"
+#include "agregarreglaweb.h"
+#include "eliminarreglas.h"
+
 #include <QWidget>
-#include <QtSql>
+
 
 namespace Ui {
 class MostrarReglas;
@@ -58,6 +62,12 @@ private slots:
     void on_pushButton_3_clicked();
 
 private:
+
+    AgregarReglas *agregarreglas;
+
+    AgregarReglaWeb *agregarreglaweb;
+
+    EliminarReglas *eliminarreglas;
 
     Ui::MostrarReglas *ui;
 };

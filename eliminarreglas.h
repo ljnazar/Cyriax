@@ -33,8 +33,6 @@
 #ifndef ELIMINARREGLAS_H
 #define ELIMINARREGLAS_H
 
-#include "mostrarreglas.h"
-
 #include <QWidget>
 
 namespace Ui {
