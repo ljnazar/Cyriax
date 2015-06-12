@@ -1,0 +1,50 @@
+#!/bin/bash
+# -- UTF 8 --
+
+# Aceptado
+
+# El comando sed elimina los espacios en blanco que se encuentran al principio, después el comando fmt convierte los espacios múltiples en un sólo espacio. Luego se utiliza el comando cut para mostrar un solo campo.
+
+var1=Aceptado:
+
+var2=Paquetes
+
+var3=Bytes
+
+varA=`iptables -L FORWARD -v -x -n | grep "ACCEPT" | awk '/Chain/ { print $5 }'`
+
+varB=`iptables -L FORWARD -v -x -n | grep "ACCEPT" | awk '/Chain/ { print $7 }'`
+
+suma1=`iptables -L FORWARD -v -x -n | grep "ACCEPT" | awk '{ sum += $1 } END { print sum+0+variableA }' variableA=$varA`
+
+suma2=`iptables -L FORWARD -v -x -n | grep "ACCEPT" | awk '{ sum += $2 } END { print sum+0+variableB }' variableB=$varB`
+
+var4=`echo $var1 $suma1 $var2 $suma2 $var3`
+
+# Descartado
+
+var5=Descartado:
+
+varC=`iptables -L FORWARD -v -x -n | grep "DROP" | awk '/Chain/ { print $5 }'`
+
+varD=`iptables -L FORWARD -v -x -n | grep "DROP" | awk '/Chain/ { print $7 }'`
+
+suma3=`iptables -L FORWARD -v -x -n | grep "DROP" | awk '{ sum += $1 } END { print sum+0+variableC }' variableC=$varC`
+
+suma4=`iptables -L FORWARD -v -x -n | grep "DROP" | awk '{ sum += $2 } END { print sum+0+variableD }' variableD=$varD`
+
+var6=`echo $var5 $suma3 $var2 $suma4 $var3`
+
+# Rechazado
+
+var7=Rechazado:
+
+suma5=`iptables -L FORWARD -v -x -n | grep "REJECT" | awk '{ sum += $1 } END { print sum+0 }'`
+
+suma6=`iptables -L FORWARD -v -x -n | grep "REJECT" | awk '{ sum += $2 } END { print sum+0 }'`
+
+var8=`echo $var7 $suma5 $var2 $suma6 $var3`
+
+# Guardar en archivo
+
+echo -e $var4\\n$var6\\n$var8 > ./registro_estado

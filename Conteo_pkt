@@ -1,0 +1,46 @@
+#!/bin/bash
+# -- UTF 8 --
+
+
+# ICMP
+
+# El comando sed elimina los espacios en blanco que se encuentran al principio, después el comando fmt convierte los espacios múltiples en un sólo espacio. Luego se utiliza el comando cut para mostrar un solo campo.
+
+var1=ICMP:
+
+var2=`iptables -L FORWARD -vxn | grep "Conteo" | awk '/icmp/ { print $1 }'`
+
+var3=`iptables -L FORWARD -vxn | grep "Conteo" | awk '/icmp/ { print $2 }'`
+
+var4=Paquetes
+
+var5=Bytes
+
+var6=`echo $var1 $var2 $var4 $var3 $var5`
+
+
+# TCP
+
+var7=TCP:
+
+var8=`iptables -L FORWARD -vxn | grep "Conteo" | awk '/tcp/ { print $1 }'`
+
+var9=`iptables -L FORWARD -vxn | grep "Conteo" | awk '/tcp/ { print $2 }'`
+
+var10=`echo $var7 $var8 $var4 $var9 $var5`
+
+
+# UDP
+
+var11=UDP:
+
+var12=`iptables -L FORWARD -vxn | grep "Conteo" | awk '/udp/ { print $1 }'`
+
+var13=`iptables -L FORWARD -vxn | grep "Conteo" | awk '/udp/ { print $2 }'`
+
+var14=`echo $var11 $var12 $var4 $var13 $var5`
+
+# Guardar en archivo
+
+echo -e $var6\\n$var10\\n$var14 > ./registro_pkt
+

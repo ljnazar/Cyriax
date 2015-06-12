@@ -217,7 +217,7 @@ void Firewall::registro_estado()
 
     // REGISTRO DE ESTADO DEL FIREWALL
 
-    system("./Estado_aux/Script");
+    system("./Conteo_estado");
 
     QFile *file2 = new QFile(this);
     file2->setFileName("registro_estado");
@@ -235,10 +235,10 @@ void Firewall::registro_pkt()
 
     // REGISTRO DE CONTEO
 
-    system("./Conteo_aux/Script");
+    system("./Conteo_pkt");
 
     QFile *file3 = new QFile(this);
-    file3->setFileName("registro_conteo");
+    file3->setFileName("registro_pkt");
     file3->open(QFile::ReadOnly);
     QString strFile3(file3->readAll());
     ui->textEdit_2->setPlainText(strFile3);
