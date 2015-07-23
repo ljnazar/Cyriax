@@ -2,7 +2,7 @@
 
 # Limitar conexiones TCP de un host en particular
 
-# Se genera una lista negra en la cual van a ingresar direcciones IP a ser bloqueadas. Cuando ingresan 2 paquetes de conexión TCP al puerto 22 (ssh) dentro de los 20 segundos desde una misma dirección IP, la misma ingresa a la lista negra. Esta dirección IP será bloqueda hasta que se cumplan 60 segundos de inactividad.
+# Se genera una lista negra en la cual van a ingresar direcciones IP a ser bloqueadas. Cuando ingresan más de 2 paquetes de conexión TCP al puerto 22 (ssh) dentro de los 20 segundos desde una misma dirección IP, la misma ingresa a la lista negra. Esta dirección IP será bloqueda hasta que se cumplan 60 segundos de inactividad.
 
 
 $iptables -A blacklist1 -m recent --name blacklist1 --set
