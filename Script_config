@@ -31,9 +31,18 @@ var16="\$iptables -A \$CADENA -p icmp -j Conteo"
 var17="\$iptables -A \$CADENA -p tcp -j Conteo"
 var18="\$iptables -A \$CADENA -p udp -j Conteo"
 
-var19="# Parámetros del firewall"
+var19="# Cadenas extra de bloqueos"
+
+var20="\$iptables -N sshbrute"
+var21="\$iptables -N blacklist1"
+var22="\$iptables -N tcpflood"
+var23="\$iptables -N blacklist2"
+var24="\$iptables -N udpflood"
+var25="\$iptables -N blacklist3"
+
+var26="# Parámetros del firewall"
 
 
 # Guardar en archivo
 
-echo -e $var1\\n\\n$var2\\n\\n$var3\\n\\n$var4\\n\\n$var5\\n\\n$var6\\n\\n$var7\\n\\n$var8\\n\\n$var9\\n\\n$var10\\n\\n$var11\\n\\n$var12\\n\\n$var13\\n\\n$var14\\n\\n$var15\\n\\n$var16\\n\\n$var17\\n\\n$var18\\n\\n$var19\\n > ./config
+echo -e $var1\\n\\n$var2\\n\\n$var3\\n\\n$var4\\n\\n$var5\\n\\n$var6\\n\\n$var7\\n\\n$var8\\n\\n$var9\\n\\n$var10\\n\\n$var11\\n\\n$var12\\n\\n$var13\\n\\n$var14\\n\\n$var15\\n\\n$var16\\n\\n$var17\\n\\n$var18\\n\\n$var19\\n\\n$var20\\n\\n$var21\\n\\n$var22\\n\\n$var23\\n\\n$var24\\n\\n$var25\\n\\n$var26\\n > ./config

@@ -29,9 +29,22 @@ varC=`iptables -L FORWARD -v -x -n | grep "DROP" | awk '/Chain/ { print $5 }'`
 
 varD=`iptables -L FORWARD -v -x -n | grep "DROP" | awk '/Chain/ { print $7 }'`
 
-suma3=`iptables -L FORWARD -v -x -n | grep "DROP" | awk '{ sum += $1 } END { print sum+0+variableC }' variableC=$varC`
+cadA1=`iptables -L blacklist1 -v -x -n | grep "DROP" | awk '{ print $1 }'`
+cadA2=`iptables -L blacklist1 -v -x -n | grep "DROP" | awk '{ print $2 }'`
+cadB1=`iptables -L blacklist2 -v -x -n | grep "DROP" | awk '{ print $1 }'`
+cadB2=`iptables -L blacklist2 -v -x -n | grep "DROP" | awk '{ print $2 }'`
+cadC1=`iptables -L blacklist3 -v -x -n | grep "DROP" | awk '{ print $1 }'`
+cadC2=`iptables -L blacklist3 -v -x -n | grep "DROP" | awk '{ print $2 }'`
+cadD1=`iptables -L sshbrute -v -x -n | grep "DROP" | awk '{ print $1 }'`
+cadD2=`iptables -L sshbrute -v -x -n | grep "DROP" | awk '{ print $2 }'`
+cadE1=`iptables -L tcpflood -v -x -n | grep "DROP" | awk '{ print $1 }'`
+cadE2=`iptables -L tcpflood -v -x -n | grep "DROP" | awk '{ print $2 }'`
+cadF1=`iptables -L udpflood -v -x -n | grep "DROP" | awk '{ print $1 }'`
+cadF2=`iptables -L udpflood -v -x -n | grep "DROP" | awk '{ print $2 }'`
 
-suma4=`iptables -L FORWARD -v -x -n | grep "DROP" | awk '{ sum += $2 } END { print sum+0+variableD }' variableD=$varD`
+suma3=`iptables -L FORWARD -v -x -n | grep "DROP" | awk '{ sum += $1 } END { print sum+0+variableC+cadenaA1+cadenaB1+cadenaC1+cadenaD1+cadenaE1+cadenaF1 }' variableC=$varC cadenaA1=$cadA1 cadenaB1=$cadB1 cadenaC1=$cadC1 cadenaD1=$cadD1 cadenaE1=$cadE1 cadenaF1=$cadF1`
+
+suma4=`iptables -L FORWARD -v -x -n | grep "DROP" | awk '{ sum += $2 } END { print sum+0+variableD+cadenaA2+cadenaB2+cadenaC2+cadenaD2+cadenaE2+cadenaF2 }' variableD=$varD cadenaA2=$cadA2 cadenaB2=$cadB2 cadenaC2=$cadC2 cadenaD2=$cadD2 cadenaE2=$cadE2 cadenaF2=$cadF2`
 
 var6=`echo $var5 $suma3 $var2 $suma4 $var3`
 

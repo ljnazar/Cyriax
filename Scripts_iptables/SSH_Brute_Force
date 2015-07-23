@@ -5,11 +5,9 @@
 # Se genera una lista negra en la cual van a ingresar direcciones IP a ser bloqueadas. Cuando ingresan 2 paquetes de conexión TCP al puerto 22 (ssh) dentro de los 20 segundos desde una misma dirección IP, la misma ingresa a la lista negra. Esta dirección IP será bloqueda hasta que se cumplan 60 segundos de inactividad.
 
 
-$iptables -N ssh
-$iptables -N blacklist1
 $iptables -A blacklist1 -m recent --name blacklist1 --set
 $iptables -A blacklist1 -j DROP
-$iptables -A ssh -m recent --update --name blacklist1 --seconds 60 --hitcount 1 -j DROP
-$iptables -A ssh -m recent --set --name counting1
-$iptables -A ssh -m recent --update --name counting1 --seconds 20 --hitcount 3 -j blacklist1
-$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --dport 22 -m state --state NEW -j ssh
+$iptables -A sshbrute -m recent --update --name blacklist1 --seconds 60 --hitcount 1 -j DROP
+$iptables -A sshbrute -m recent --set --name counting1
+$iptables -A sshbrute -m recent --update --name counting1 --seconds 20 --hitcount 3 -j blacklist1
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --dport 22 -m state --state NEW -j sshbrute

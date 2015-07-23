@@ -5,8 +5,6 @@
 # Se genera una lista negra en la cual van a ingresar direcciones IP a ser bloqueadas. Cuando ingresan 5 paquetes UDP en 1 segundo desde una misma dirección IP, la misma ingresa a la lista negra. Esta dirección IP será bloqueda hasta que se cumplan 60 segundos de inactividad.
 
 
-$iptables -N udpflood
-$iptables -N blacklist3
 $iptables -A blacklist3 -m recent --name blacklist3 --set
 $iptables -A blacklist3 -j DROP
 $iptables -A udpflood -m recent --update --name blacklist3 --seconds 60 --hitcount 1 -j DROP

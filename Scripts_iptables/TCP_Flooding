@@ -5,8 +5,6 @@
 # Se genera una lista negra en la cual van a ingresar direcciones IP a ser bloqueadas. Cuando ingresan 5 paquetes de conexión TCP en 1 segundo desde una misma dirección IP, la misma ingresa a la lista negra. Esta dirección IP será bloqueda hasta que se cumplan 60 segundos de inactividad.
 
 
-$iptables -N tcpflood
-$iptables -N blacklist2
 $iptables -A blacklist2 -m recent --name blacklist2 --set
 $iptables -A blacklist2 -j DROP
 $iptables -A tcpflood -m recent --update --name blacklist2 --seconds 60 --hitcount 1 -j DROP
