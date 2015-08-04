@@ -5,7 +5,6 @@ moc_*
 ui_*
 config
 regla
-Makefile
 Cyriax
 registro_bloqueo
 registro_conteo
