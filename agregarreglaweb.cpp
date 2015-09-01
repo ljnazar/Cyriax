@@ -224,7 +224,7 @@ void AgregarReglaWeb::on_pushButton_clicked()
     query.exec();
 
     // Eliminar del script
-    system("sed '/`# id=0`/d' ./regla_pre > ./regla_aux");
+    system("sed '/`# id= 0`/d' ./regla_pre > ./regla_aux");
     system("cat ./regla_aux > ./regla_pre");
 
 

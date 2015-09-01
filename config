@@ -34,6 +34,20 @@ $iptables -A $CADENA -p tcp -j Conteo
 
 $iptables -A $CADENA -p udp -j Conteo
 
+# Cadenas extra de bloqueos
+
+$iptables -N sshbrute
+
+$iptables -N blacklist1
+
+$iptables -N tcpflood
+
+$iptables -N blacklist2
+
+$iptables -N udpflood
+
+$iptables -N blacklist3
+
 # Parámetros del firewall
 
 # IP WEB SERVER
@@ -50,49 +64,5 @@ IFACE_Nro2="eth1"
 
 
 # Módulos de iptables
-
-
-# Módulo Nro 1: PAQUETE INVÁLIDO
-
-# Descarte de paquete inválido
-
-$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -m state --state INVALID -j LOG --log-prefix "Paquete invalido: " --log-level 4
-
-$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -m state --state INVALID -j DROP
-
-
-
-# Módulo Nro 2: ICMP FLOODING
-
-# Bloqueo de mensajes ICMP que generan respuesta. Se evita que el firewall sea detectado mediante la devolución de un mensaje de host inalcanzable. Se descartan todos los paquetes y se envia un mensaje de host inalcanzable cada 1 minuto
-
-# Mensajes de solicitud (que generan respuesta):
-
-# echo-request
-# timestamp-request
-# information-request (Obsoleto)
-# address-mask-request (No responde)
-# router-solicitation (No responde)
-
-
-# Bloqueo de mensaje echo-request
-
-
-$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type echo-request -j LOG --log-prefix "ICMP echo-request: " --log-level 4
-
-$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type echo-request -m limit --limit 1/minute --limit-burst 1 -j REJECT --reject-with icmp-host-unreachable
-
-$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type echo-request -j DROP
-
-
-# Bloqueo de mensaje timestamp-request
-
-
-$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type timestamp-request -j LOG --log-prefix "ICMP timestamp-request: " --log-level 4
-
-$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type timestamp-request -m limit --limit 1/minute --limit-burst 1 -j REJECT --reject-with icmp-host-unreachable
-
-$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p icmp --icmp-type timestamp-request -j DROP
-
 
 
