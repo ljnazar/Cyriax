@@ -1,13 +1,3 @@
 # a comment – this is ignored
 
-bin/Cyriax
-build/*.o
-build/moc_*
-build/ui_*
-doc
-Makefile
-/src/config
-/src/regla
-/src/registro_bloqueo
-/src/registro_conteo
-/src/registro_pkt
+
