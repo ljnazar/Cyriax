@@ -49,4 +49,3 @@ cd bin/
 
 ./Cyriax
 
-
