@@ -1,0 +1,7 @@
+# Módulo Nro 1: PAQUETE INVÁLIDO
+
+# Descarte de paquete inválido
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -m state --state INVALID -j LOG --log-prefix "Paquete invalido: " --log-level 4
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -m state --state INVALID -j DROP

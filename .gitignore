@@ -1,0 +1,11 @@
+# a comment – this is ignored
+
+bin/*
+build/*
+doc
+Makefile
+/src/config
+/src/regla
+/src/registro_bloqueo
+/src/registro_conteo
+/src/registro_pkt

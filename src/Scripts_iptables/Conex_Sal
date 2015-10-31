@@ -1,0 +1,7 @@
+# Módulo Nro 7: TCP - Conexiones salientes
+
+# Descarta los paquetes salientes desde el servidor para evitar conexiones clandestinas.
+
+$iptables -A $CADENA -o $IFACE_Nro1 -p tcp --syn --dport 0:65535 -m state --state NEW -j LOG --log-prefix "TCP - Conexión saliente: " --log-level 4
+
+$iptables -A $CADENA -o $IFACE_Nro1 -p tcp --syn --dport 0:65535 -m state --state NEW -j DROP
