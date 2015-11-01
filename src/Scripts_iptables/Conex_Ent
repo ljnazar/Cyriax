@@ -1,7 +1,0 @@
-# Módulo Nro 6: TCP - Conexiones entrantes
-
-# Descarta los paquetes y genera un mensaje de respuesta que le hace pensar al atacante que los puertos están cerrados. En caso de sólo descartar los paquetes, el atacante se dará cuenta que hay un firewall antes del servidor.
-
-$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --syn --dport 0:65535 -m state --state NEW -j LOG --log-prefix "TCP - Conexión entrante: " --log-level 4
-
-$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --syn --dport 0:65535 -m state --state NEW -j REJECT --reject-with tcp-reset
