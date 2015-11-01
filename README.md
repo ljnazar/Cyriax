@@ -5,6 +5,7 @@ This program is a firewall application that works in conjunction with Netfilter/
 
 
 Necesario para que funcione:
+----------------------------
 
 
 1) Establecer el LOG para iptables, ya que ese LOG sirve para visualizar el bloqueo de los ataques en el software.
