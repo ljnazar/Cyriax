@@ -3,6 +3,7 @@
 
 This program is a firewall application that works in conjunction with Netfilter/iptables. Cyriax allows blocking external attacks to a computer connected to the internet and has special features to block attacks from the application layer of the TCP/IP model.
 
+----------------------------
 
 ###Necesario para que funcione:
 ----------------------------
