@@ -1,0 +1,8 @@
+# Módulo Nro 4: TCP SYN ERRONEO
+
+# Descarte de TCP SYN erroneo
+
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp ! --syn -m state --state NEW -j LOG --log-prefix "TCP SYN Erroneo: " --log-level 4
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp ! --syn -m state --state NEW -j DROP

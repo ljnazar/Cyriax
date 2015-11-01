@@ -1,0 +1,11 @@
+# Módulo Nro 6: Conexiones entrantes excepto port 80
+
+# Se va a dejar abierto el puerto:
+
+# 80/TCP = HTTP
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --syn --dport 0:65535 -m state --state NEW -j LOG --log-prefix "TCP - Conexión entrante: " --log-level 4
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --dport 80 --syn -j ACCEPT
+
+$iptables -A $CADENA -i $IFACE_Nro1 -d $IPWS -p tcp --syn --dport 0:65535 -m state --state NEW -j REJECT --reject-with tcp-reset
