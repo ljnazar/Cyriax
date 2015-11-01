@@ -42,8 +42,11 @@ qmake -o Makefile Cyriax.pro
 
 make
 
+5) Dar permisos a la carpeta de instalación
 
-5) Ejecutar aplicación
+chmod -R 777 Carpeta-de-instalación
+
+6) Ejecutar aplicación
 
 cd bin/
 
