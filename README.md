@@ -12,7 +12,7 @@ Es un Firewall que trabaja en conjunto con Netfilter/iptables para bloquear ataq
 
 ----------------------------
 
-###Necesario para que funcione:
+### Necesario para que funcione:
 
 
 **1) Establecer el LOG para iptables, ya que ese LOG sirve para visualizar el bloqueo de los ataques en el software**
